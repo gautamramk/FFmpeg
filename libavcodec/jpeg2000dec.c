@@ -2123,7 +2123,7 @@ static void jpeg2000_dec_cleanup(Jpeg2000DecoderContext *s)
                 Jpeg2000Component *comp     = s->tile[tileno].comp   + compno;
                 Jpeg2000CodingStyle *codsty = s->tile[tileno].codsty + compno;
 
-                ff_jpeg2000_cleanup(comp, codsty);
+                ff_jpeg2000_cleanup(comp, codsty, 0);
             }
             av_freep(&s->tile[tileno].comp);
             av_freep(&s->tile[tileno].packed_headers);

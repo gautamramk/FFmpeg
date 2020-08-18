@@ -580,7 +580,7 @@ void ff_jpeg2000_reinit(Jpeg2000Component *comp, Jpeg2000CodingStyle *codsty)
     }
 }
 
-void ff_jpeg2000_cleanup(Jpeg2000Component *comp, Jpeg2000CodingStyle *codsty)
+void ff_jpeg2000_cleanup(Jpeg2000Component *comp, Jpeg2000CodingStyle *codsty, int isencoder)
 {
     int reslevelno, bandno, precno;
     for (reslevelno = 0;

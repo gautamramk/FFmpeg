@@ -1218,7 +1218,7 @@ static void cleanup(Jpeg2000EncoderContext *s)
     for (tileno = 0; tileno < s->numXtiles * s->numYtiles; tileno++){
         for (compno = 0; compno < s->ncomponents; compno++){
             Jpeg2000Component *comp = s->tile[tileno].comp + compno;
-            ff_jpeg2000_cleanup(comp, codsty);
+            ff_jpeg2000_cleanup(comp, codsty, 1);
         }
         av_freep(&s->tile[tileno].comp);
     }

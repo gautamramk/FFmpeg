@@ -272,7 +272,7 @@ int ff_jpeg2000_init_component(Jpeg2000Component *comp,
 
 void ff_jpeg2000_reinit(Jpeg2000Component *comp, Jpeg2000CodingStyle *codsty);
 
-void ff_jpeg2000_cleanup(Jpeg2000Component *comp, Jpeg2000CodingStyle *codsty);
+void ff_jpeg2000_cleanup(Jpeg2000Component *comp, Jpeg2000CodingStyle *codsty, int isencoder);
 
 static inline int needs_termination(int style, int passno) {
     if (style & JPEG2000_CBLK_BYPASS) {
